@@ -8,7 +8,7 @@ This is a simple, sample project that blinks some LEDs on the [ULX3S](https://gi
 Prerequisites
 -------------
 
- - [yosys](https://github.com/YosysHS/yosys) (at least git revision 5387ccb041f4acafc96c7b3fcf8db04dddfb8ab5)
+ - [yosys](https://github.com/YosysHQ/yosys) (at least git revision 5387ccb041f4acafc96c7b3fcf8db04dddfb8ab5)
  - [nextpnr](https://github.com/YosysHQ/nextpnr) (at least git revision 31c199f674a0c2cc381eb09510aaa8ad8d5ae3fd, with ECP5 support enabled)
  - [openocd](https://openocd.org) with [4f134c755d7209a8eb1c4460e09f5c68622ef0bd](http://openocd.zylin.com/gitweb?p=openocd.git;a=commitdiff;h=4f134c755d7209a8eb1c4460e09f5c68622ef0bd) cherrypicked or merged
 

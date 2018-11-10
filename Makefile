@@ -23,7 +23,7 @@ SVF = build/top.svf
 SOURCES = rtl/top.v
 CONSTRAINTS = ulx3s/top.lpf
 
-default: $(SVF)
+default: $(BITSTREAM)
 
 build:
 	mkdir build
@@ -37,8 +37,8 @@ $(BITSTREAM_ASC): $(NETLIST) $(CONSTRAINTS) $(BASECONFIG)
 $(BITSTREAM): $(BITSTREAM_ASC)
 	$(ECPPACK) --input $< --bit $@
 
-$(SVF): $(BITSTREAM)
-	python3 ulx3s/bit_to_svf.py $< $@
+$(SVF): $(BITSTREAM_ASC)
+	$(ECPPACK) --input $< --svf $@
 
 flash: $(SVF)
 	openocd -f "ulx3s/openocd.cfg" -c "init; svf $<; exit"

@@ -1,0 +1,37 @@
+# Copyright 2018 Serge Bazanski <serge@bazanski.pl>
+#
+# SPDX-License-Identifier: CC0-1.0
+
+LOCATE COMP "clk_buf" SITE G2;
+IOBUF PORT "clk_buf" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "btn_buf" SITE R1;
+IOBUF PORT "btn_buf" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "led_buf_0" SITE B2;
+IOBUF PORT "led_buf_0" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "led_buf_1" SITE C2;
+IOBUF PORT "led_buf_1" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "led_buf_2" SITE C1;
+IOBUF PORT "led_buf_2" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "led_buf_3" SITE D2;
+IOBUF PORT "led_buf_3" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "led_buf_4" SITE D1;
+IOBUF PORT "led_buf_4" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "led_buf_5" SITE E2;
+IOBUF PORT "led_buf_5" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "led_buf_6" SITE E1;
+IOBUF PORT "led_buf_6" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "led_buf_7" SITE H3;
+IOBUF PORT "led_buf_7" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "gpio0_buf" SITE L2;
+IOBUF PORT "gpio0_buf" IO_TYPE=LVCMOS33;
+

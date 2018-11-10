@@ -1,31 +1,9 @@
 // Copyright (C) 2018 David Shah <david@symbioticeda.com>
+// Copyright (C) 2018 Serge Bazanski <serge@bazanski.pl>
 // 
 // SPDX-License-Identifier: ISC
 
-module top(input clk_pin, input btn_pin, output [7:0] led_pin, output gpio0_pin);
-
-    wire clk;
-    wire [7:0] led;
-    wire btn;
-    wire gpio0;
-
-    TRELLIS_IO #(.DIR("INPUT")) clk_buf (.B(clk_pin), .O(clk));
-
-    TRELLIS_IO #(.DIR("INPUT")) btn_buf (.B(btn_pin), .O(btn));
-
-    TRELLIS_IO #(.DIR("OUTPUT")) led_buf_0 (.B(led_pin[0]), .I(led[0]));
-    TRELLIS_IO #(.DIR("OUTPUT")) led_buf_1 (.B(led_pin[1]), .I(led[1]));
-    TRELLIS_IO #(.DIR("OUTPUT")) led_buf_2 (.B(led_pin[2]), .I(led[2]));
-    TRELLIS_IO #(.DIR("OUTPUT")) led_buf_3 (.B(led_pin[3]), .I(led[3]));
-
-    TRELLIS_IO #(.DIR("OUTPUT")) led_buf_4 (.B(led_pin[4]), .I(led[4]));
-    TRELLIS_IO #(.DIR("OUTPUT")) led_buf_5 (.B(led_pin[5]), .I(led[5]));
-    TRELLIS_IO #(.DIR("OUTPUT")) led_buf_6 (.B(led_pin[6]), .I(led[6]));
-    TRELLIS_IO #(.DIR("OUTPUT")) led_buf_7 (.B(led_pin[7]), .I(led[7]));
-
-
-    TRELLIS_IO #(.DIR("OUTPUT")) gpio0_buf (.B(gpio0_pin), .I(gpio0));
-
+module top(input clk, input btn, output [7:0] led, output gpio0);
     localparam ctr_width = 24;
     localparam ctr_max = 2**ctr_width - 1;
     reg [ctr_width-1:0] ctr = 0;
